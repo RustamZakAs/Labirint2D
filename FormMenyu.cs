@@ -16,6 +16,7 @@ namespace WindowsFormsApp2
         public FormMenyu()
         {
             InitializeComponent();
+            //https://www.youtube.com/watch?v=0YTLPPn-yCY
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
