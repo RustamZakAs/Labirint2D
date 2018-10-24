@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using System.Text;
+using System.Linq;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace Labirint2D
 {
@@ -37,6 +37,9 @@ namespace Labirint2D
             }
             else if (dr == DialogResult.Abort) level = 1;
             labelLevel.Text = "Level  " + level + "/" + maxLevel;
+
+            var MyIni = new IniFile("Settings.ini");
+            MyIni.Write("Level", level.ToString());
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -63,6 +66,10 @@ namespace Labirint2D
         private void FormMenyu_Load(object sender, EventArgs e)
         {
             level = 1;
+
+            var MyIni = new IniFile("Settings.ini");
+            level = int.Parse(MyIni.Read("Level"));
+
             checkBoxSound_Click(sender, null);
             labelLevel.Text = "Level  " + level + "/" + maxLevel;
         }

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Levels));
-            this.labelStart = new System.Windows.Forms.Label();
-            this.labelFinish = new System.Windows.Forms.Label();
+            this.labelStart1 = new System.Windows.Forms.Label();
+            this.labelFinish1 = new System.Windows.Forms.Label();
             this.labelLeftBorder = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelT2 = new System.Windows.Forms.Label();
             this.labelT1 = new System.Windows.Forms.Label();
-            this.labelKey = new System.Windows.Forms.Label();
+            this.labelKey2 = new System.Windows.Forms.Label();
             this.labelStart2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -53,34 +53,34 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.labelDoor = new System.Windows.Forms.Label();
+            this.labelDoor2 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // labelStart
+            // labelStart1
             // 
-            this.labelStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.labelStart.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelStart.Location = new System.Drawing.Point(13, 13);
-            this.labelStart.Name = "labelStart";
-            this.labelStart.Size = new System.Drawing.Size(59, 35);
-            this.labelStart.TabIndex = 0;
-            this.labelStart.Text = "Start";
-            this.labelStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelStart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.labelStart1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelStart1.Location = new System.Drawing.Point(13, 13);
+            this.labelStart1.Name = "labelStart1";
+            this.labelStart1.Size = new System.Drawing.Size(59, 35);
+            this.labelStart1.TabIndex = 0;
+            this.labelStart1.Text = "Start";
+            this.labelStart1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelFinish
+            // labelFinish1
             // 
-            this.labelFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.labelFinish.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelFinish.Location = new System.Drawing.Point(389, 278);
-            this.labelFinish.Name = "labelFinish";
-            this.labelFinish.Size = new System.Drawing.Size(59, 35);
-            this.labelFinish.TabIndex = 1;
-            this.labelFinish.Text = "Finish";
-            this.labelFinish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelFinish.MouseEnter += new System.EventHandler(this.labelFinish_MouseEnter);
+            this.labelFinish1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.labelFinish1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelFinish1.Location = new System.Drawing.Point(389, 278);
+            this.labelFinish1.Name = "labelFinish1";
+            this.labelFinish1.Size = new System.Drawing.Size(59, 35);
+            this.labelFinish1.TabIndex = 1;
+            this.labelFinish1.Text = "Finish";
+            this.labelFinish1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelFinish1.MouseEnter += new System.EventHandler(this.labelFinish_MouseEnter);
             // 
             // labelLeftBorder
             // 
@@ -161,10 +161,10 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.labelStart);
+            this.panel1.Controls.Add(this.labelStart1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.labelFinish);
+            this.panel1.Controls.Add(this.labelFinish1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.labelLeftBorder);
             this.panel1.Controls.Add(this.label3);
@@ -181,7 +181,7 @@
             // 
             this.panel2.Controls.Add(this.labelT2);
             this.panel2.Controls.Add(this.labelT1);
-            this.panel2.Controls.Add(this.labelKey);
+            this.panel2.Controls.Add(this.labelKey2);
             this.panel2.Controls.Add(this.labelStart2);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label9);
@@ -191,7 +191,7 @@
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.labelDoor);
+            this.panel2.Controls.Add(this.labelDoor2);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
@@ -221,17 +221,17 @@
             this.labelT1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelT1.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
             // 
-            // labelKey
+            // labelKey2
             // 
-            this.labelKey.BackColor = System.Drawing.Color.Yellow;
-            this.labelKey.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelKey.Location = new System.Drawing.Point(312, 13);
-            this.labelKey.Name = "labelKey";
-            this.labelKey.Size = new System.Drawing.Size(59, 35);
-            this.labelKey.TabIndex = 18;
-            this.labelKey.Text = "Key";
-            this.labelKey.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelKey.MouseEnter += new System.EventHandler(this.labelKey_MouseEnter);
+            this.labelKey2.BackColor = System.Drawing.Color.Yellow;
+            this.labelKey2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelKey2.Location = new System.Drawing.Point(312, 13);
+            this.labelKey2.Name = "labelKey2";
+            this.labelKey2.Size = new System.Drawing.Size(59, 35);
+            this.labelKey2.TabIndex = 18;
+            this.labelKey2.Text = "Key";
+            this.labelKey2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelKey2.MouseEnter += new System.EventHandler(this.labelKey2_MouseEnter);
             // 
             // labelStart2
             // 
@@ -333,16 +333,16 @@
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label15.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
             // 
-            // labelDoor
+            // labelDoor2
             // 
-            this.labelDoor.BackColor = System.Drawing.Color.Yellow;
-            this.labelDoor.Location = new System.Drawing.Point(380, 162);
-            this.labelDoor.Margin = new System.Windows.Forms.Padding(0);
-            this.labelDoor.Name = "labelDoor";
-            this.labelDoor.Size = new System.Drawing.Size(74, 10);
-            this.labelDoor.TabIndex = 19;
-            this.labelDoor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelDoor.MouseEnter += new System.EventHandler(this.labelDoor_MouseEnter);
+            this.labelDoor2.BackColor = System.Drawing.Color.Yellow;
+            this.labelDoor2.Location = new System.Drawing.Point(380, 162);
+            this.labelDoor2.Margin = new System.Windows.Forms.Padding(0);
+            this.labelDoor2.Name = "labelDoor2";
+            this.labelDoor2.Size = new System.Drawing.Size(74, 10);
+            this.labelDoor2.TabIndex = 19;
+            this.labelDoor2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelDoor2.MouseEnter += new System.EventHandler(this.labelDoor_MouseEnter);
             // 
             // timer2
             // 
@@ -365,7 +365,6 @@
             this.Name = "Levels";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Levels";
-            this.Load += new System.EventHandler(this.Levels_Load);
             this.Shown += new System.EventHandler(this.Levels_Shown);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -375,8 +374,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelStart;
-        private System.Windows.Forms.Label labelFinish;
+        private System.Windows.Forms.Label labelStart1;
+        private System.Windows.Forms.Label labelFinish1;
         private System.Windows.Forms.Label labelLeftBorder;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -386,7 +385,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label labelKey;
+        private System.Windows.Forms.Label labelKey2;
         private System.Windows.Forms.Label labelStart2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -396,7 +395,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label labelDoor;
+        private System.Windows.Forms.Label labelDoor2;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label labelT2;
         private System.Windows.Forms.Label labelT1;

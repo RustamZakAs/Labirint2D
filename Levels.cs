@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using System.Text;
+using System.Linq;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using System.ComponentModel;
+using System.Collections.Generic;
 
 namespace Labirint2D
 {
@@ -22,8 +22,32 @@ namespace Labirint2D
         private void Levels_Shown(object sender, EventArgs e)
         {
             Point point;
-            point = labelStart.Location;
-            point.Offset(labelStart.Width/2, labelStart.Height/2);
+            point = labelStart1.Location;
+            switch (level)
+            {
+                case 1:
+                    point = labelStart1.Location;
+                    panel1.Location = new Point(0, 0);
+                    panel1.Visible = true;
+                    break;
+                case 2:
+                    point = labelStart2.Location;
+                    panel2.Location = new Point(0, 0);
+                    labelKey2.Visible = true;
+                    labelDoor2.Visible = true;
+                    panel2.Visible = true;
+                    timer2.Enabled = true;
+                    labelT1.Visible = true;
+                    labelT2.Visible = false;
+                    break;
+                case 3:
+                    //goto case 1;
+                    DialogResult = System.Windows.Forms.DialogResult.Abort;
+                    break;
+                default:
+                    break;
+            }
+            point.Offset(labelStart1.Width / 2, labelStart1.Height / 2);
             Cursor.Position = PointToScreen(point);
         }
 
@@ -47,41 +71,15 @@ namespace Labirint2D
             }
         }
 
-        private void Levels_Load(object sender, EventArgs e)
-        {
-            switch (level)
-            {
-                case 1:
-                    panel1.Location = new Point(0,0);
-                    panel1.Visible = true;
-                    break;
-                case 2:
-                    panel2.Location = new Point(0, 0);
-                    labelKey.Visible = true;
-                    labelDoor.Visible = true;
-                    panel2.Visible = true;
-                    timer2.Enabled = true;
-                    labelT1.Visible = true;
-                    labelT2.Visible = false;
-                    break;
-                case 3:
-                    //goto case 1;
-                    DialogResult = System.Windows.Forms.DialogResult.Abort;
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        private void labelKey_MouseEnter(object sender, EventArgs e)
+        private void labelKey2_MouseEnter(object sender, EventArgs e)
         {
             this.keyDoor = true;
             Sound.Play(Sound.sound_start);
             //OpenCloseDoor();
-            labelKey.Visible = false;
+            labelKey2.Visible = false;
         }
 
-        private void OpenCloseDoor(object ocd = null)
+        private void OpenCloseDoor(Label door,/*bool*/object ocd = null)
         {
             bool openClose;
             if(ocd != null) openClose = (bool)ocd;
@@ -91,13 +89,13 @@ namespace Labirint2D
             }
             if (openClose)
             {
-                labelDoor.Visible = false;
-            } else labelDoor.Visible = false;
+                door.Visible = false;
+            } else door.Visible = false;
         }
 
         private void labelDoor_MouseEnter(object sender, EventArgs e)
         {
-            if (keyDoor) OpenCloseDoor();
+            if (keyDoor) OpenCloseDoor((Label)sender);
             else MessageBox.Show("Fined key!");
         }
 
