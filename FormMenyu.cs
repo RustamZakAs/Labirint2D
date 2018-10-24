@@ -12,10 +12,12 @@ namespace Labirint2D
     public partial class FormMenyu : Form
     {
         public int level { get; set; }
+        public int maxLevel { get; set; }
 
         public FormMenyu()
         {
             InitializeComponent();
+            maxLevel = 2;
             //https://www.youtube.com/watch?v=0YTLPPn-yCY
         }
 
@@ -28,8 +30,13 @@ namespace Labirint2D
                 Size = new Size(459, 324)
             };
             DialogResult dr = formLevels.ShowDialog();
-            if (dr == DialogResult.OK) this.level++;
+            if (dr == DialogResult.OK)
+            {
+                if (++this.level > maxLevel)
+                    this.level = 1;
+            }
             else if (dr == DialogResult.Abort) level = 1;
+            labelLevel.Text = "Level  " + level + "/" + maxLevel;
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -57,6 +64,7 @@ namespace Labirint2D
         {
             level = 1;
             checkBoxSound_Click(sender, null);
+            labelLevel.Text = "Level  " + level + "/" + maxLevel;
         }
     }
 }

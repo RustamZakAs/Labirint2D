@@ -32,6 +32,7 @@
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
             this.checkBoxSound = new System.Windows.Forms.CheckBox();
+            this.labelLevel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonStart
@@ -74,12 +75,24 @@
             this.checkBoxSound.UseVisualStyleBackColor = false;
             this.checkBoxSound.Click += new System.EventHandler(this.checkBoxSound_Click);
             // 
+            // labelLevel
+            // 
+            this.labelLevel.AutoSize = true;
+            this.labelLevel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelLevel.Location = new System.Drawing.Point(12, 9);
+            this.labelLevel.Name = "labelLevel";
+            this.labelLevel.Size = new System.Drawing.Size(76, 18);
+            this.labelLevel.TabIndex = 3;
+            this.labelLevel.Text = "Level  0/0";
+            // 
             // FormMenyu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Labirint2D.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(676, 257);
+            this.Controls.Add(this.labelLevel);
             this.Controls.Add(this.checkBoxSound);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonStart);
@@ -104,6 +117,7 @@
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.CheckBox checkBoxSound;
+        private System.Windows.Forms.Label labelLevel;
     }
 }
 
