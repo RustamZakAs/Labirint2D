@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp2
+﻿namespace Labirint2D
 {
     partial class Levels
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Levels));
             this.labelStart = new System.Windows.Forms.Label();
             this.labelFinish = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelKey = new System.Windows.Forms.Label();
             this.labelStart2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,8 +51,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.labelKey = new System.Windows.Forms.Label();
             this.labelDoor = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.labelT1 = new System.Windows.Forms.Label();
+            this.labelT2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -175,6 +179,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.labelT2);
+            this.panel2.Controls.Add(this.labelT1);
             this.panel2.Controls.Add(this.labelKey);
             this.panel2.Controls.Add(this.labelStart2);
             this.panel2.Controls.Add(this.label8);
@@ -192,6 +198,18 @@
             this.panel2.Size = new System.Drawing.Size(460, 325);
             this.panel2.TabIndex = 10;
             this.panel2.Visible = false;
+            // 
+            // labelKey
+            // 
+            this.labelKey.BackColor = System.Drawing.Color.Yellow;
+            this.labelKey.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelKey.Location = new System.Drawing.Point(312, 13);
+            this.labelKey.Name = "labelKey";
+            this.labelKey.Size = new System.Drawing.Size(59, 35);
+            this.labelKey.TabIndex = 18;
+            this.labelKey.Text = "Key";
+            this.labelKey.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelKey.MouseEnter += new System.EventHandler(this.labelKey_MouseEnter);
             // 
             // labelStart2
             // 
@@ -293,18 +311,6 @@
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label15.MouseEnter += new System.EventHandler(this.labels_MouseEnter);
             // 
-            // labelKey
-            // 
-            this.labelKey.BackColor = System.Drawing.Color.Yellow;
-            this.labelKey.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelKey.Location = new System.Drawing.Point(312, 13);
-            this.labelKey.Name = "labelKey";
-            this.labelKey.Size = new System.Drawing.Size(59, 35);
-            this.labelKey.TabIndex = 18;
-            this.labelKey.Text = "Key";
-            this.labelKey.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelKey.MouseEnter += new System.EventHandler(this.labelKey_MouseEnter);
-            // 
             // labelDoor
             // 
             this.labelDoor.BackColor = System.Drawing.Color.Yellow;
@@ -316,11 +322,36 @@
             this.labelDoor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelDoor.MouseEnter += new System.EventHandler(this.labelDoor_MouseEnter);
             // 
+            // timer2
+            // 
+            this.timer2.Interval = 900;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // labelT1
+            // 
+            this.labelT1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.labelT1.Location = new System.Drawing.Point(0, 82);
+            this.labelT1.Margin = new System.Windows.Forms.Padding(0);
+            this.labelT1.Name = "labelT1";
+            this.labelT1.Size = new System.Drawing.Size(460, 10);
+            this.labelT1.TabIndex = 20;
+            this.labelT1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelT2
+            // 
+            this.labelT2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.labelT2.Location = new System.Drawing.Point(0, 219);
+            this.labelT2.Margin = new System.Windows.Forms.Padding(0);
+            this.labelT2.Name = "labelT2";
+            this.labelT2.Size = new System.Drawing.Size(460, 10);
+            this.labelT2.TabIndex = 21;
+            this.labelT2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Levels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 324);
+            this.ClientSize = new System.Drawing.Size(933, 324);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -364,5 +395,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label labelDoor;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label labelT2;
+        private System.Windows.Forms.Label labelT1;
     }
 }

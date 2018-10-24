@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Media;
 
-namespace WindowsFormsApp2
+namespace Labirint2D
 {
     class Sound
     {

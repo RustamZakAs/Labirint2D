@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp2
+namespace Labirint2D
 {
     public partial class Levels : Form
     {
@@ -57,10 +57,15 @@ namespace WindowsFormsApp2
                     break;
                 case 2:
                     panel2.Location = new Point(0, 0);
+                    labelKey.Visible = true;
+                    labelDoor.Visible = true;
                     panel2.Visible = true;
+                    timer2.Enabled = true;
+                    labelT1.Visible = true;
+                    labelT2.Visible = false;
                     break;
                 case 3:
-                    goto case 1;
+                    //goto case 1;
                     DialogResult = System.Windows.Forms.DialogResult.Abort;
                     break;
                 default:
@@ -94,6 +99,15 @@ namespace WindowsFormsApp2
         {
             if (keyDoor) OpenCloseDoor();
             else MessageBox.Show("Fined key!");
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (panel2.Visible)
+            {
+                labelT1.Visible = !labelT1.Visible;
+                labelT2.Visible = !labelT2.Visible;
+            }
         }
     }
 }

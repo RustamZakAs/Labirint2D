@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp2
+namespace Labirint2D
 {
     public partial class FormMenyu : Form
     {

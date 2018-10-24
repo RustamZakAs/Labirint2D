@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp2
+﻿namespace Labirint2D
 {
     partial class FormMenyu
     {
@@ -78,7 +78,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp2.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(676, 257);
             this.Controls.Add(this.checkBoxSound);
