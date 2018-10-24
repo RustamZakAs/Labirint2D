@@ -41,6 +41,12 @@ namespace Labirint2D
                     labelT2.Visible = false;
                     break;
                 case 3:
+                    Panel panel3 = new Panel()
+                    {
+                        Location = new Point(0, 0),
+                        Size = new Size(460, 325),
+                    };
+
                     //goto case 1;
                     DialogResult = System.Windows.Forms.DialogResult.Abort;
                     break;
